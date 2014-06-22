@@ -4,17 +4,22 @@
 ## The following function will cache inverse of a matrix
 
 makeCacheMatrix <- function(x = mat()) {
+        ## Initialize variables
         inv <- NULL
         
+        ## Setting matrix
         set <- function( m ) {
                 mat <<- m
                 inv <<- NULL
         }
         
+        ## Retrieve matrix
         get <- function() mat
         
+        ## Set inverse matrix
         setInverse <- function(i) inv <<- i
         
+        ## Retrieve inverse matrix
         getInverse <- function() inv
         
         ## Return the list
@@ -28,8 +33,8 @@ makeCacheMatrix <- function(x = mat()) {
 ## Following function is to resolve inverse of a matrix
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         
+        ## Return a matrix that is the inverse of 'x'
         mat <- x$getInverse()
         
         ## Return the matrix m, if it is already inversed
